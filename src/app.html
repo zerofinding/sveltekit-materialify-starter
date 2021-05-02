@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<link rel="icon" href="/favicon.ico" />
+
+<style type="text/css">
+html,
+body{
+	height:100%;
+}
+
+img.icolorlightmode {
+  --svg-mode: invert(18%) sepia(0%) saturate(0%) hue-rotate(157deg) brightness(98%) contrast(92%);
+  filter: var(--svg-mode);
+}
+
+img.icolordarkmode {
+  --svg-mode: invert(99%) sepia(99%) saturate(2%) hue-rotate(265deg) brightness(106%) contrast(101%);
+  filter: var(--svg-mode);
+}
+
+/*div[class*="active"] span img.icorotate{transform: rotate(180deg);}*/
+div.s-list-group div[class*="active"] span img.icorotate{transform: rotate(180deg);}
+
+/*div.s-list-group-active div[class*="active"] span img.icorotate{transform: rotate(180deg);}
+div.s-list-group-active div.s-list-group__items{
+	display: block;
+}
+div.s-list-group-none div.s-list-group__items{
+	display: none;
+}*/
+
+/*svelte-materialify override*/
+.theme--light div[class*="s-list-item__title"] span,
+.theme--light div[class*="s-list-item__title"] a{
+	color:var(--theme-text-primary)
+}
+.theme--dark div[class*="s-list-item__title"] span,
+.theme--dark div[class*="s-list-item__content"] div.s-list-item__title a{
+	color:var(--theme-text-primary)
+	/*color:#82b1ff*/
+}
+.theme--dark div[class*="s-list-item__title"] a span{color:var(--theme-text-primary)}
+
+a {
+	text-decoration: none;
+}
+</style>
+		%svelte.head%
+	</head>
+	<body>
+		<div id="svelte" style="height: 100%">%svelte.body%</div>
+	</body>
+</html>
